@@ -26,10 +26,13 @@
 }
 
 .item .fruit {
-    width: 90%;
+    max-width: 1200px;
     position: absolute;
     top: 0;
     z-index: 3;
+    left: 53%;
+    top: 40%;
+    transform: translate(-50%, -50%)
 
 }
 
@@ -49,7 +52,7 @@
     transform: translate(-50%);
     width: 50px;
     height: 50px;
-    background-color: transparent;
+    background-color: lightgray;
     border: 1px solid #eee9;
     color: #eee;
     font-size: x-large;
@@ -65,4 +68,19 @@
 
 #next {
     right: 30px;
+}
+
+@keyframes toActive {
+    from  {
+        top: 100%;
+        opacity: 0;
+    }
+}
+
+.item.active img.fruit {
+    animation: toActive 0.5s ease-in-out;
+}
+
+.item.active .title {
+    animation: toActive 0.5s ease-in-out;
 }
